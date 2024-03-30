@@ -11,7 +11,7 @@ node_to_index = {}
 for i in range(len(bt)):
     node = bt[i]
     node_name = node[0]
-    node_to_index[node_name] = i
+    node_to_index[node_name] = i  # 이름이 키
 
 
 def Pre(index: int):
