@@ -35,6 +35,7 @@ def bfs(cur, cnt):
         if now == k:
             return sec
         else:
+            # 이동할 지점의 위치와 방문 표시 확인
             if n_plus(now) <= maxpoint and not chk_num[n_plus(now)]:
                 d.append((n_plus(now), sec + 1))
                 chk_num[n_plus(now)] = True
