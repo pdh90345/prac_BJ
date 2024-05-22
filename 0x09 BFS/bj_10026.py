@@ -18,7 +18,7 @@ dy = [0, 1, 0, -1]
 d = deque()
 
 
-def bfs(i, j, cnt, check):
+def bfs(i, j, cnt, check):  # x, y, 각 보드별 카운트, 적록색약인지 확인
     d.append((i, j))
     if check == True:
         r_g[i][j] = cnt

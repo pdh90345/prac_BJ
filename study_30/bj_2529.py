@@ -5,7 +5,7 @@ import sys
 
 k = int(input())
 signs = list(map(str, sys.stdin.readline().split()))
-signs.insert(0, 0)
+signs.insert(0, "0")
 
 chk_num = [False] * (10)
 
@@ -35,6 +35,9 @@ def dfs(depth, ans):
                     chk_num[i] = True
                     dfs(depth + 1, ans + str(i))  # depth 올리면서 문자열 추가
                     chk_num[i] = False
+
+
+a = 1
 
 
 dfs(0, "")
