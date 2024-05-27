@@ -33,7 +33,7 @@ def bfs_s():  # 상근
         cur = building[x][y]
         if x == 0 or x == h - 1 or y == 0 or y == w - 1:  # 빌딩의 끝까지 도착하면 탈출
             possible = True
-            result = min(result, cur + 1)  # type: ignore
+            result = cur + 1  # type: ignore
             return
         for k in range(4):
             nx = x + dx[k]
@@ -57,7 +57,7 @@ for _ in range(t):
     d_f = deque()
     d_s = deque()
     possible = False
-    result = sys.maxsize
+    result = 0
     for i in range(h):
         for j in range(w):
             if building[i][j] == "*":
