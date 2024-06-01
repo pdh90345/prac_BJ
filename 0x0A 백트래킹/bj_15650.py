@@ -1,19 +1,21 @@
-# N과 M(1)
+# N과 M(2)
 
 import sys
-from itertools import permutations
 
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
 
+arr = [0]
+check = set()
+
 
 def back(depth):
     if depth == m:
-        print(*arr)
+        print(*arr[1:])
         return
     for i in range(1, n + 1):
-        if i not in check:
+        if i not in check and i > arr[-1]:
             check.add(i)
             arr.append(i)
             back(depth + 1)
@@ -21,13 +23,4 @@ def back(depth):
             arr.remove(i)
 
 
-arr = []
-check = set()
 back(0)
-
-# perm = list(permutations(range(1, n + 1), m))
-# perm.sort()
-
-# for item in perm:
-#     str_item = " ".join(map(str, item))
-#     print(str_item)
