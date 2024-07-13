@@ -18,6 +18,7 @@ for i in range(n):
         continue
     arr.append(int(input().strip()))
 
+# 처음 d개를 나중에 담는다
 for item in d:
     arr.append(int(item))
 
